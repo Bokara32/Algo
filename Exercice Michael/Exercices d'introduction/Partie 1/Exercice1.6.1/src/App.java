@@ -12,10 +12,12 @@ public class App {
         int C = A;
 
         /* Calcul d'inversion */
-        
+
         A=B;
         B=C;
 
+       /* Affichage des résultats */
+       
         System.out.print("\n");
 
         System.out.print( " La valeur de A est : " + A + "\n \n La valeur de B est : " + B );
