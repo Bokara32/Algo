@@ -1,13 +1,20 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
+        /* Inscription des Valeurs */
+
         int A = 20 ;
 
-        int B = 12 ; 
+        int B = 12 ;
 
-        int invA = B;
+        /* Ajout de la valeur Réservoir pour Faire l'inversion */
+
+        int C = A;
+
+        /* Calcul d'inversion */
         
-        int invB = A;
+        A=B;
+        B=C;
 
         System.out.print("\n");
 
@@ -15,7 +22,7 @@ public class App {
 
         System.out.print("\n \n");
 
-        System.out.print( " La valeur de A est : " + invA + "\n \n La valeur de B est : " + invB );
+        System.out.print(" La valeur de A est : " + A + "\n \n La valeur de B est : " + B );
 
         
         
