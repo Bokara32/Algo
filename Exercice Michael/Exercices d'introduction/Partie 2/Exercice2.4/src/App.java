@@ -31,7 +31,7 @@ public class App {
         
         if ( Heure < 0 || Heure >= 24 || Minute > 59) { System.out.print(" Les données saisies sont invalides \n \n " + " On recommence !! \n "); }
 
-        } while (Heure < 0 || Heure >= 24 || Minute > 59);  
+        } while (Heure < 0 || Heure >= 24 || Minute > 59 );  
 
         /* Fin de boucle si condition Fausse, début du calcul */
 
@@ -41,13 +41,17 @@ public class App {
 
         int calculM = Minute + 3;
 
-        int calculim = calculM - 1;
+        int calculim = calculM - 60;
 
-        /* Condition de calcul en rapport aux Minutes */
+        int calculAm = calculH - 24;
 
-        if (calculM > 60) { System.out.print(" Dans trois minutes, il sera : " + calculH + " h " + calculim ); }
+        /* Condition de calcul en rapport aux Minutes et aux heures */
+
+        if ( Heure < 24) { System.out.print(" Dans trois minutes, il sera : " + calculAm + " h " + calculim ); }
+
+        else if (calculM > 60) { System.out.print(" Dans trois minutes, il sera : " + calculH + " h " + calculim ); }
         
-        else { System.out.print(" Dans trois minutes, il sera : " + Heure + " h " + calculM ); }
+        else { System.out.println(" Dans trois minutes, il sera : " + Heure + calculM ); }
 
         scan.close();
     }
