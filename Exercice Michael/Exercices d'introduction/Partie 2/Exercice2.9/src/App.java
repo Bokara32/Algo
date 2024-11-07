@@ -15,6 +15,8 @@ public class App {
 
         System.out.print( " \n");
 
+        /* Saisie des informations */
+
         System.out.print( " Saisissez votre Age : \n \n");
 
         int Age = scan.nextInt(); 
@@ -33,18 +35,43 @@ public class App {
 
         int Aassu = scan.nextInt();
 
-        if ( (Age <= 25 && APermis <= 2 && sinistre == 0) || (Age > 25 && APermis < 2 && sinistre == 1 ) || ( Age > 25 && APermis > 2 && sinistre == 2)){ System.out.print( " Votre tarif sera Rouge "); }
+        /* Renseignement des Variables */
 
-        else if ( (Age <= 25 && APermis >= 2 && sinistre == 0) || (Age > 25 && APermis < 2 && sinistre == 0) ||( Age > 25 && APermis > 2 && sinistre == 1)|| (Age > 25 && APermis < 2 && sinistre == 1 && Aassu > 5) ){ System.out.print( " Votre tarif sera orange "); }
+        int AgeT = 0; 
 
-        else if (( Age > 25 && APermis > 2 && sinistre == 0) || ( Age > 25 && APermis > 2 && sinistre == 1 && Aassu > 5)){ System.out.print( " Votre tarif sera vert ");}
+        int ApermiT = 0;
 
-        else if (Age > 25 && APermis > 2 && sinistre == 0 && Aassu > 5){System.out.print(" Votre tarif sera Bleu "); }
+        int sinistreT = 0; 
 
-        else { System.out.print( " Dossier refuser "); }
+        int AassuT = 0 ;
 
+        /* Mise en place des conditions des variables */
 
+        if ( Age<= 25){ AgeT = 0 ;} else { AgeT = 1 ;}
+
+        if ( APermis <= 2) { ApermiT = 0; } else { ApermiT = 1 ;}
+
+        if ( sinistre <= 0 ) { sinistreT = 0;} else if(sinistre == 1){ sinistreT = -1;}else if(sinistre == 2){ sinistreT = -2;}else { sinistreT = -4;}
+
+        if ( Aassu > 5) { AassuT = 1;} else { AassuT = 0;}
+
+        /* Calcul du résultat */
+
+        int CalculP = AgeT + ApermiT + sinistreT + AassuT;
+
+        /* Affichage du résultat selon condition  */
+
+        if ( CalculP < 0) { System.out.print( " Votre dossier est refuser ");  }
+
+        else if ( CalculP == 0 ) { System.out.print( " Votre tarif sera Rouge ");}
         
+        else if ( CalculP == 1 && CalculP <= 2 ) { System.out.print( " Votre tarif sera Orange ");}
+
+        else if ( CalculP > 2 && CalculP <= 3) { System.out.print( " Votre tarif sera Vert ");} 
+
+        else { System.out.print( " Votre tarif sera bleu ");}
+
+        scan.close();
         
     }
 }
