@@ -65,9 +65,9 @@ public class App {
 
         else if ( CalculP == 0 ) { System.out.print( " Votre tarif sera Rouge ");}
         
-        else if ( CalculP == 1 && CalculP <= 2 ) { System.out.print( " Votre tarif sera Orange ");}
+        else if ( CalculP <= 2 ) { System.out.print( " Votre tarif sera Orange ");}
 
-        else if ( CalculP > 2 && CalculP <= 3) { System.out.print( " Votre tarif sera Vert ");} 
+        else if ( CalculP == 3 ) { System.out.print( " Votre tarif sera Vert ");} 
 
         else { System.out.print( " Votre tarif sera bleu ");}
 
