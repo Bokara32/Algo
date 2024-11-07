@@ -47,11 +47,12 @@ public class App {
 
         /* Mise en place des conditions des variables */
 
-        if ( Age<= 25){ AgeT = 0 ;} else { AgeT = 1 ;}
+        if ( Age<= 25){ AgeT = 0 ;} else if (Age > 25) { AgeT = 1 ;}
 
         if ( APermis <= 2) { ApermiT = 0; } else { ApermiT = 1 ;}
 
-        if ( sinistre <= 0 ) { sinistreT = 0;} else if(sinistre == 1){ sinistreT = -1;}else if(sinistre == 2){ sinistreT = -2;}else { sinistreT = -4;}
+        if ( sinistre == 0 ) { sinistreT = 1;} else if(sinistre == 1){ sinistreT = -1;}else if(sinistre == 2){ sinistreT = -2;} else { sinistreT = -3;}
+    
 
         if ( Aassu > 5) { AassuT = 1;} else { AassuT = 0;}
 
@@ -67,7 +68,7 @@ public class App {
         
         else if ( CalculP <= 2 ) { System.out.print( " Votre tarif sera Orange ");}
 
-        else if ( CalculP == 3 ) { System.out.print( " Votre tarif sera Vert ");} 
+        else if ( CalculP <= 3 ) { System.out.print( " Votre tarif sera Vert ");} 
 
         else { System.out.print( " Votre tarif sera bleu ");}
 
