@@ -15,7 +15,7 @@ public class App {
 
         int Age = scan.nextInt(); 
 
-        System.out.print( " Vous êtes titulaire du permis de conduire depuis combien d'années ? \n \n Saisissez la valeur :");
+        System.out.print( " Vous êtes titulaire du permis de conduire depuis combien d'années ? \n \n " );
 
         int APermis = scan.nextInt();
 
