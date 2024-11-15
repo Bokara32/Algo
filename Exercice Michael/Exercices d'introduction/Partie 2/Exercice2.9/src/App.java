@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javafx.scene.paint.Color;
-
 public class App {
     public static void main(String[] args) throws Exception {
     
