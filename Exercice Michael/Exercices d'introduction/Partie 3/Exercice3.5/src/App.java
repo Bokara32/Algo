@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        /* Ouverture du Scanner */
+        /* Exercice 3.5 la Factorielle */
 
          Scanner scan = new Scanner(System.in);
 
@@ -11,11 +11,9 @@ public class App {
 
          int vsaisie ;
 
-         int vzero = 0 ; 
-
-         int calcul;
-
-         int Resultat = 0 ;
+         int ite = 1 ; 
+         
+         int fact = 1 ;
 
          System.out.print(" \n ");
 
@@ -27,21 +25,12 @@ public class App {
 
          /* Calcul logique de la suite d'addition */
          
-         for (int i = vzero; i <= vsaisie; i++) { calcul= i+i; Resultat = vsaisie + calcul; } 
-            
-         System.out.print( " Le Résultat de la suite d'addition est : " + Resultat );
+         for  (ite = 1; ite <= vsaisie; ite++) { fact = fact * ite; }
+
+         System.out.print( " Le Résultat de la Factorielle de : " + vsaisie + " est : " + fact );
 
          /* Fermeture du Scanner */
 
          scan.close();
-
-         
-
-
-         
-         
-
-
-         
     }
 }
