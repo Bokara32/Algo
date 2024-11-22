@@ -27,32 +27,19 @@ public class App {
          /* Définition du boolean selon condition */
 
          if( (destinataireOk && espaceDispo == true) && (pieceJ== false)^(pieceJ== true && virus == false && pieceJp < 25  )&& (destianataireAbs == true)) 
-            { System.out.print( " \n\n Message Transmis : ");} 
+            { System.out.print( " \n\n Message Transmis : ");} /* Condition Normal */
          
          else if ((destinataireOk && espaceDispo == true) && (pieceJ== false)^(pieceJ== true && virus == false && pieceJp < 25  )&& (destianataireAbs == false))
-                  { System.out.print("\n \n  Message Transmis : " + " Le déstinataire est absent et rique de ne pas pouvoir vous répondre");}
+                  { System.out.print(" \n \n  Message Transmis : " + " Le déstinataire est absent et rique de ne pas pouvoir vous répondre");} /* Condition Piéce jointe  */
 
-         else { System.out.print(" \n\n Une erreur est survenu le message n'a pas pu être transmis à l'éxpediteur ");
+         else { System.out.print(" \n\n Une erreur est survenu le message n'a pas pu être transmis à l'éxpediteur "); /* Condition d'erreur */
+
+         scan.close();
 
          
         
             
         
         }
-        
-
-   
-        
-
-         
-        
-        
-        
-         
-        
-          
-         
-
-
     }
-    }
+}
