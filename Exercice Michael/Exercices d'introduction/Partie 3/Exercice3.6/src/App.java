@@ -30,6 +30,7 @@ public class App {
              valsc[vali] = scan.nextInt(); 
 
              vali++; }
+
              
          while (vali < 5); 
 
